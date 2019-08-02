@@ -35,7 +35,7 @@
   },
   "level": 1,
   "name": "Domenic",
-  "room": "limbo:white",
+  "room": "limbo:training1",
   "effects": [
     {
       "config": {
@@ -51,13 +51,13 @@
         "type": "regen",
         "unique": true
       },
-      "elapsed": 1272094,
+      "elapsed": 1506680,
       "id": "regen",
       "remaining": null,
       "state": {
         "magnitude": 15,
-        "lastTick": 219,
-        "ticks": 418
+        "lastTick": 693,
+        "ticks": 494
       }
     }
   ],
@@ -141,6 +141,36 @@
           "config": {
             "level": 1,
             "title": "A Journey Begins"
+          }
+        }
+      ],
+      [
+        "limbo:onecheeseplease",
+        {
+          "state": [
+            {
+              "state": {
+                "count": 0
+              },
+              "progress": {
+                "percent": 0,
+                "display": "Found Cheese: [0/1]"
+              },
+              "config": {
+                "title": "Found Cheese",
+                "removeItem": true,
+                "count": 1,
+                "item": "limbo:sliceofcheese"
+              }
+            }
+          ],
+          "progress": {
+            "percent": 0,
+            "display": "Found Cheese: [0/1]"
+          },
+          "config": {
+            "level": 1,
+            "title": "One Cheese Please"
           }
         }
       ]
