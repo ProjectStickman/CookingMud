@@ -84,9 +84,9 @@
       }
     }
   },
-  "maxAccountNameLength": 20,
+  "maxAccountNameLength": 30,
   "minAccountNameLength": 3,
-  "maxPlayerNameLength": 20,
+  "maxPlayerNameLength": 30,
   "minPlayerNameLength": 3,
   "maxCharacters": 3,
   "reportToAdmins": false,
