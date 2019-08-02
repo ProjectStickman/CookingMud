@@ -1,40 +1,40 @@
 {
   "attributes": {
+    "health": {
+      "delta": 0,
+      "base": 100
+    },
     "strength": {
       "delta": 0,
-      "base": 17
+      "base": 20
     },
     "agility": {
       "delta": 0,
-      "base": 10
+      "base": 20
     },
     "intellect": {
       "delta": 0,
-      "base": 8
+      "base": 20
     },
     "stamina": {
       "delta": 0,
-      "base": 11
-    },
-    "health": {
-      "delta": 0,
-      "base": 154
+      "base": 20
     },
     "armor": {
       "delta": 0,
       "base": 0
     },
-    "energy": {
-      "delta": 0,
-      "base": 100
-    },
     "critical": {
       "delta": 0,
       "base": 0
+    },
+    "mana": {
+      "delta": 0,
+      "base": 100
     }
   },
   "level": 1,
-  "name": "Admin",
+  "name": "Domenic",
   "room": "limbo:white",
   "effects": [
     {
@@ -51,13 +51,13 @@
         "type": "regen",
         "unique": true
       },
-      "elapsed": 1202901,
+      "elapsed": 1272094,
       "id": "regen",
       "remaining": null,
       "state": {
         "magnitude": 15,
-        "lastTick": 760,
-        "ticks": 395
+        "lastTick": 219,
+        "ticks": 418
       }
     }
   ],
@@ -67,9 +67,9 @@
     "max": 16
   },
   "metadata": {
-    "class": "warrior"
+    "class": "mage"
   },
-  "prompt": "[ %health.current%/%health.max% <b>hp</b> %energy.current%/%energy.max% <b>energy</b> ]",
+  "prompt": "[ %health.current%/%health.max% <b>hp</b> %mana.current%/%mana.max% <b>mana</b> ]",
   "quests": {
     "completed": [],
     "active": [
@@ -146,6 +146,6 @@
       ]
     ]
   },
-  "role": 2,
+  "role": 0,
   "equipment": {}
 }
