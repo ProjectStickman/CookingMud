@@ -1,7 +1,7 @@
 ---
 - id: startroad
   title: "Forest Road"
-  description: "A small road between many trees. A small clearing can be seen up ahead"
+  description: "A small dirt road between many tall trees. A small clearing can be seen up ahead"
   script: "start"
   coordinates: [0, 0, 0]
   npcs: [martnest:squirrel]
