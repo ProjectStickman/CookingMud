@@ -3,9 +3,19 @@
   keywords: ['squirrel']
   name: A Squirrel
   level: 2
-  description: "A furry little squirrel"
+  description: "A furry little grey squirrel"
   script: 'squirrel'
   behaviors:
     ranvier-wander:
       interval: 30
+      areaRestricted: true
+- id: marten
+  keywords: ['marten']
+  name: A Marten
+  level: 3
+  description: "A furry little brown marten with a cream chest"
+  script: 'marten'
+  behaviors:
+    ranvier-wander:
+      interval: 20
       areaRestricted: true
