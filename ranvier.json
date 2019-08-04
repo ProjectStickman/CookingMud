@@ -89,11 +89,7 @@
   "minPlayerNameLength": 3,
   "maxCharacters": 3,
   "reportToAdmins": false,
-<<<<<<< HEAD
   "startingRoom": "martnest:startroad",
-=======
-  "startingRoom": "mapped:start",
->>>>>>> 914d12a5f818bd52a62e42fc49396cd993a6f61e
   "moveCommand": "move",
   "skillLag": 2000,
   "defaultMaxPlayerInventory": 16,
