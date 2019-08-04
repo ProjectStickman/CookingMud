@@ -35,7 +35,7 @@
   },
   "level": 1,
   "name": "Admin",
-  "room": "limbo:white",
+  "room": "mapped:start",
   "effects": [
     {
       "config": {
@@ -51,12 +51,12 @@
         "type": "regen",
         "unique": true
       },
-      "elapsed": 1202908,
+      "elapsed": 1202938,
       "id": "regen",
       "remaining": null,
       "state": {
         "magnitude": 15,
-        "lastTick": 767,
+        "lastTick": 797,
         "ticks": 395
       }
     }
