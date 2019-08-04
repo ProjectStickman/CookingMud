@@ -1,0 +1,11 @@
+---
+- id: squirrel
+  keywords: ['squirrel']
+  name: A Squirrel
+  level: 2
+  description: "A furry little squirrel"
+  script: 'squirrel'
+  behaviors:
+    ranvier-wander:
+      interval: 30
+      areaRestricted: true

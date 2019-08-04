@@ -1,0 +1,11 @@
+---
+- id: startroad
+  title: "Forest Road"
+  description: "A small road between many trees. A small clearing can be seen up ahead"
+  script: "start"
+  coordinates: [0, 0, 0]
+  npcs: [martnest:squirrel]
+- id: mainroad
+  title: "Martnest Main Road"
+  description: "A wide, curdly paved road leading to the town of Martnest. To the south the road travels up a hill, to the north it curves slightly into an area of taller trees."
+  coordinates: [0, 1, 0]

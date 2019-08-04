@@ -1,7 +1,6 @@
 {
   "port": 4000,
   "bundles": [
-    "bundle-example-areas",
     "bundle-example-channels",
     "bundle-example-classes",
     "bundle-example-combat",
@@ -12,13 +11,13 @@
     "bundle-example-lib",
     "bundle-example-npc-behaviors",
     "bundle-example-player-events",
-    "bundle-example-quests",
     "simple-crafting",
     "vendor-npcs",
     "player-groups",
     "progressive-respawn",
     "telnet-networking",
-    "websocket-networking"
+    "websocket-networking",
+    "merchants-tale"
   ],
   "dataSources": {
     "YamlArea": {
@@ -84,13 +83,17 @@
       }
     }
   },
-  "maxAccountNameLength": 20,
+  "maxAccountNameLength": 30,
   "minAccountNameLength": 3,
-  "maxPlayerNameLength": 20,
+  "maxPlayerNameLength": 30,
   "minPlayerNameLength": 3,
   "maxCharacters": 3,
   "reportToAdmins": false,
-  "startingRoom": "limbo:white",
+<<<<<<< HEAD
+  "startingRoom": "martnest:startroad",
+=======
+  "startingRoom": "mapped:start",
+>>>>>>> 914d12a5f818bd52a62e42fc49396cd993a6f61e
   "moveCommand": "move",
   "skillLag": 2000,
   "defaultMaxPlayerInventory": 16,

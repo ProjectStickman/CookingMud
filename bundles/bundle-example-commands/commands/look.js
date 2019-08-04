@@ -121,7 +121,7 @@ function lookRoom(state, player) {
 
   // show all npcs
   room.npcs.forEach(npc => {
-    // show quest state as [!], [%], [?] for available, in progress, ready to complete respectively
+    // show quest state as [?], [%], [!] for available, in progress, ready to complete respectively
     let hasNewQuest, hasActiveQuest, hasReadyQuest;
     if (npc.quests) {
       hasNewQuest = npc.quests.find(questRef => state.QuestFactory.canStart(player, questRef));
@@ -136,9 +136,9 @@ function lookRoom(state, player) {
 
       let questString = '';
       if (hasNewQuest || hasActiveQuest || hasReadyQuest) {
-        questString += hasNewQuest ? '[<b><yellow>!</yellow></b>]' : '';
-        questString += hasActiveQuest ? '[<b><yellow>%</yellow></b>]' : '';
-        questString += hasReadyQuest ? '[<b><yellow>?</yellow></b>]' : '';
+        questString += hasNewQuest ? '[<b><red>?</red></b>]' : '';
+        questString += hasActiveQuest ? '[<b><orange>%</orange></b>]' : '';
+        questString += hasReadyQuest ? '[<b><green>!</green></b>]' : '';
         B.at(player, questString + ' ');
       }
     }
@@ -149,25 +149,25 @@ function lookRoom(state, player) {
     }
 
     // color NPC label by difficulty
-    let npcLabel = 'NPC';
+    let npcLabel = npc.name + combatantsDisplay;
     switch (true) {
       case (player.level  - npc.level > 4):
-        npcLabel = '<cyan>NPC</cyan>';
+        npcLabel = '<cyan>'+npcLabel+'</cyan>';
         break;
       case (npc.level - player.level > 9):
-        npcLabel = '<b><black>NPC</black></b>';
+        npcLabel = '<b><black>'+npcLabel+'</black></b>';
         break;
       case (npc.level - player.level > 5):
-        npcLabel = '<red>NPC</red>';
+        npcLabel = '<red>'+npcLabel+'</red>';
         break;
       case (npc.level - player.level > 3):
-        npcLabel = '<yellow>NPC</red>';
+        npcLabel = '<yellow>'+npcLabel+'</red>';
         break;
       default:
-        npcLabel = '<green>NPC</green>';
+        npcLabel = '<green>'+npcLabel+'</green>';
         break;
     }
-    B.sayAt(player, `[${npcLabel}] ` + npc.name + combatantsDisplay);
+    B.sayAt(player, `[${npcLabel}] `);
   });
 
   B.at(player, '[<yellow><b>Exits</yellow></b>: ');

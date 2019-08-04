@@ -1,0 +1,4 @@
+title: Martnest
+behaviors:
+  progressive-respawn:
+    interval: 30

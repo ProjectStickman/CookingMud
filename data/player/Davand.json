@@ -1,0 +1,55 @@
+{
+  "attributes": {
+    "health": {
+      "delta": 0,
+      "base": 100
+    },
+    "strength": {
+      "delta": 0,
+      "base": 20
+    },
+    "agility": {
+      "delta": 0,
+      "base": 20
+    },
+    "intellect": {
+      "delta": 0,
+      "base": 20
+    },
+    "stamina": {
+      "delta": 0,
+      "base": 20
+    },
+    "armor": {
+      "delta": 0,
+      "base": 0
+    },
+    "critical": {
+      "delta": 0,
+      "base": 0
+    },
+    "mana": {
+      "delta": 0,
+      "base": 100
+    }
+  },
+  "level": 1,
+  "name": "Davand",
+  "room": "martnest:startroad",
+  "effects": [],
+  "experience": 0,
+  "inventory": {
+    "items": [],
+    "max": 16
+  },
+  "metadata": {
+    "class": "mage"
+  },
+  "prompt": "[ %health.current%/%health.max% <b>hp</b> %mana.current%/%mana.max% <b>mana</b> ]",
+  "quests": {
+    "completed": [],
+    "active": []
+  },
+  "role": 0,
+  "equipment": {}
+}
