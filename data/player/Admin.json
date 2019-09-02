@@ -36,7 +36,31 @@
   "level": 1,
   "name": "Admin",
   "room": "martnest:startroad",
-  "effects": [],
+  "effects": [
+    {
+      "config": {
+        "autoActivate": true,
+        "description": "You are regenerating over time.",
+        "duration": "inf",
+        "hidden": true,
+        "maxStacks": 0,
+        "name": "Regenerate",
+        "persists": true,
+        "refreshes": false,
+        "tickInterval": 3,
+        "type": "regen",
+        "unique": true
+      },
+      "elapsed": 1206612,
+      "id": "regen",
+      "remaining": null,
+      "state": {
+        "magnitude": 15,
+        "lastTick": 803,
+        "ticks": 398
+      }
+    }
+  ],
   "experience": 0,
   "inventory": {
     "items": [],

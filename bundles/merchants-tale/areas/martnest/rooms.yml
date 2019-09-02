@@ -5,6 +5,9 @@
   script: "start"
   coordinates: [0, 0, 0]
   npcs: [martnest:squirrel]
+  items:
+    - id: "mining:ironore"
+      respawnChance: 15
 - id: mainroad
   title: "Martnest Main Road"
   description: "A wide, curdly paved road leading to the town of Martnest. To the south the road travels up a hill, to the north it curves slightly into an area of taller trees."

@@ -261,18 +261,6 @@ bundles/progressive-respawn/behaviors/area/progressive-respawn.js
 bundles/progressive-respawn/package-lock.json
 bundles/progressive-respawn/package.json
 bundles/progressive-respawn/README.md
-bundles/simple-crafting/areas/craft/items.yml
-bundles/simple-crafting/areas/craft/manifest.yml
-bundles/simple-crafting/commands/craft.js
-bundles/simple-crafting/commands/gather.js
-bundles/simple-crafting/commands/resources.js
-bundles/simple-crafting/data/recipes.json
-bundles/simple-crafting/data/resources.json
-bundles/simple-crafting/help/craft.yml
-bundles/simple-crafting/lib/Crafting.js
-bundles/simple-crafting/package-lock.json
-bundles/simple-crafting/package.json
-bundles/simple-crafting/README.md
 bundles/telnet-networking/lib/TelnetStream.js
 bundles/telnet-networking/package-lock.json
 bundles/telnet-networking/package.json
@@ -296,7 +284,6 @@ data/player/Admin.json
 bundles/websocket-networking
 bundles/vendor-npcs
 bundles/telnet-networking
-bundles/simple-crafting
 bundles/progressive-respawn
 bundles/player-groups
 bundles/bundle-example-quests
