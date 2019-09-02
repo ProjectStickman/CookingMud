@@ -6,5 +6,9 @@
   "rose_petal": {
     "title": "Rose Petal",
     "quality": "uncommon"
+  },
+  "iron_ore": {
+    "title": "Iron Ore",
+    "quality": "uncommon"
   }
 }

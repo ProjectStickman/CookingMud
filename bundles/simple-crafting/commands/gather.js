@@ -23,6 +23,14 @@ module.exports = {
       return B.sayAt(player, "You can't gather anything from that.");
     }
 
+    const tool = node.getMeta('tool');
+    console.log(tool);
+    const item = ArgParser.parseDot(tool, player.equipment);
+
+    if (!item) {
+      return B.sayAt(player, "You don't have the right tool for that. ("+tool+")");
+    }
+
     if (!player.getMeta('resources')) {
       player.setMeta('resources', {});
     }
@@ -37,6 +45,8 @@ module.exports = {
         B.sayAt(player, `<green>You gather: ${ItemUtil.display(resItem)} x${amount}.`);
       }
     }
+
+    player.save();
 
     // destroy node, will be respawned
     state.ItemManager.remove(node);

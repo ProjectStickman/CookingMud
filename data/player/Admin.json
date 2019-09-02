@@ -51,13 +51,13 @@
         "type": "regen",
         "unique": true
       },
-      "elapsed": 1206612,
+      "elapsed": 1214906,
       "id": "regen",
       "remaining": null,
       "state": {
         "magnitude": 15,
-        "lastTick": 803,
-        "ticks": 398
+        "lastTick": 3011,
+        "ticks": 400
       }
     }
   ],
@@ -67,7 +67,10 @@
     "max": 16
   },
   "metadata": {
-    "class": "warrior"
+    "class": "warrior",
+    "resources": {
+      "iron_ore": 5
+    }
   },
   "prompt": "[ %health.current%/%health.max% <b>hp</b> %energy.current%/%energy.max% <b>energy</b> ]",
   "quests": {

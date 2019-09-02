@@ -1,5 +1,5 @@
 - id: "ironpickaxe"
-  name: "Iron Pickae"
+  name: "Iron Pickaxe"
   type: WEAPON
   roomDesc: "Iron Pickaxe"
   keywords: [ "pick", "pickaxe", "metal", "iron", "mining", "dig" ]
