@@ -23,12 +23,17 @@ module.exports = {
       return B.sayAt(player, "You can't gather anything from that.");
     }
 
-    const tool = node.getMeta('tool');
-    console.log(tool);
-    const item = ArgParser.parseDot(tool, player.equipment);
-
+    //const tool = getTool(state, node.getMeta('tool'));
+    const metaTool = node.getMeta('tool')
+    const toolSplit = metaTool.split(":");
+    //const tool = state.ItemFactory.create(toolSplit[0], metaTool);
+    console.log(metaTool);
+    console.log(player.equipment);
+    console.log(player.equipment.wield);
+    const item = ArgParser.parseDot(metaTool[1], player.equipment, true);
+    console.log(item);
     if (!item) {
-      return B.sayAt(player, "You don't have the right tool for that. ("+tool+")");
+      return B.sayAt(player, "You don't have the right tool for that ("+toolSplit[1]+")");
     }
 
     if (!player.getMeta('resources')) {
@@ -54,3 +59,12 @@ module.exports = {
     node = null;
   }
 };
+
+function getTool(state, resource){
+  return Object.entries(resource).map(([itemRef]) => {
+    const area = state.AreaManager.getAreaByReference(itemRef);
+    console.log(area);
+    console.log(itemRef);
+    return state.ItemFactory.create(area, itemRef);
+  });
+}

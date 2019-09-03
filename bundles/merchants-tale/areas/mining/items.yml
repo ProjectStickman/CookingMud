@@ -10,10 +10,26 @@
     itemLevel: 1
     quality: common
     noPickup: true
-    tool: "ironpickaxe"
+    tool: "mining:ironpickaxe"
     resource:
       depletedMessage: "Rock that has been stripped of usable materials."
       materials:
         iron_ore:
           min: 1
           max: 3
+- id: ironpickaxe
+  name: "Iron Pickaxe"
+  type: WEAPON
+  roomDesc: "Iron Pickaxe"
+  keywords: [ "pick", "pickaxe", "metal", "iron", "mining", "dig" ]
+  description: "A heavily used and rather jagged iron pickaxe."
+  metadata:
+    level: 2
+    slot: 'wield'
+    itemLevel: 1
+    quality: common
+    minDamage: 4
+    maxDamage: 15
+    speed: 2.8
+    stats:
+      critical: 1
