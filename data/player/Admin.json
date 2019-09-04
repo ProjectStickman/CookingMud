@@ -35,7 +35,7 @@
   },
   "level": 1,
   "name": "Admin",
-  "room": "martnest:startroad",
+  "room": "martnest:mainroad",
   "effects": [
     {
       "config": {
@@ -51,42 +51,65 @@
         "type": "regen",
         "unique": true
       },
-      "elapsed": 1715926,
+      "elapsed": 2776434,
       "id": "regen",
       "remaining": null,
       "state": {
         "magnitude": 15,
-        "lastTick": 1300,
-        "ticks": 551
-      }
-    },
-    {
-      "config": {
-        "autoActivate": true,
-        "description": "",
-        "duration": "inf",
-        "hidden": true,
-        "maxStacks": 0,
-        "name": "Equip: wield",
-        "persists": true,
-        "refreshes": false,
-        "tickInterval": false,
-        "type": "equip.wield",
-        "unique": true
-      },
-      "elapsed": 1894,
-      "id": "equip",
-      "remaining": null,
-      "state": {
-        "slot": "wield",
-        "stats": {
-          "critical": 1
-        }
+        "lastTick": 88,
+        "ticks": 880
       }
     }
   ],
   "experience": 0,
-  "inventory": null,
+  "inventory": {
+    "items": [
+      [
+        "371ff484-19de-4eb9-9ce9-13e1a79f162a",
+        {
+          "entityReference": "mining:ironpickaxe",
+          "inventory": null,
+          "metadata": {
+            "level": 2,
+            "slot": "wield",
+            "itemLevel": 1,
+            "quality": "common",
+            "minDamage": 4,
+            "maxDamage": 15,
+            "speed": 2.8,
+            "stats": {
+              "critical": 1
+            },
+            "enchantment": [
+              {
+                "name": "Magical",
+                "level": 1
+              },
+              {
+                "name": "Shiny",
+                "level": 4
+              }
+            ]
+          },
+          "description": "A heavily used and rather jagged iron pickaxe.",
+          "keywords": [
+            "pick",
+            "pickaxe",
+            "metal",
+            "iron",
+            "mining",
+            "dig"
+          ],
+          "name": "Iron Pickaxe",
+          "roomDesc": "Iron Pickaxe",
+          "closed": false,
+          "locked": false,
+          "behaviors": {}
+        }
+      ]
+    ],
+    "max": 16
+  },
   "metadata": {
     "class": "warrior",
     "resources": {
@@ -133,11 +156,11 @@
             },
             {
               "state": {
-                "equipped": true
+                "equipped": false
               },
               "progress": {
-                "percent": 100,
-                "display": "Wield A Weapon: Equipped"
+                "percent": 0,
+                "display": "Wield A Weapon: Not Equipped"
               },
               "config": {
                 "title": "Wield A Weapon",
@@ -159,8 +182,8 @@
             }
           ],
           "progress": {
-            "percent": 25,
-            "display": "Find a Weapon: [0/1]\r\nFind Some Armor: [0/1]\r\nWield A Weapon: Equipped\r\nEquip Some Armor: Not Equipped"
+            "percent": 0,
+            "display": "Find a Weapon: [0/1]\r\nFind Some Armor: [0/1]\r\nWield A Weapon: Not Equipped\r\nEquip Some Armor: Not Equipped"
           },
           "config": {
             "level": 1,
@@ -171,36 +194,5 @@
     ]
   },
   "role": 2,
-  "equipment": {
-    "wield": {
-      "entityReference": "mining:ironpickaxe",
-      "inventory": null,
-      "metadata": {
-        "level": 2,
-        "slot": "wield",
-        "itemLevel": 1,
-        "quality": "common",
-        "minDamage": 4,
-        "maxDamage": 15,
-        "speed": 2.8,
-        "stats": {
-          "critical": 1
-        }
-      },
-      "description": "A heavily used and rather jagged iron pickaxe.",
-      "keywords": [
-        "pick",
-        "pickaxe",
-        "metal",
-        "iron",
-        "mining",
-        "dig"
-      ],
-      "name": "Iron Pickaxe",
-      "roomDesc": "Iron Pickaxe",
-      "closed": false,
-      "locked": false,
-      "behaviors": {}
-    }
-  }
+  "equipment": {}
 }
