@@ -15,17 +15,18 @@ module.exports = {
          const inventory = this.inventory;
          //console.log(inventory);
          //var itemEnchantments = item.getMeta("enchantment");
-         inventory.forEach(function(item) {
-            const enchantments = item.getMeta("enchantment");
-            if(enchantments){
-               for (let key of Object.keys(enchantments)) {
-                  var enchantment = enchantments[key];
-                  BonusUtil.addEnchantment(item, enchantment, state.ItemFactory);
-               } 
-               console.log(enchantments);
-            }
-            
-          });
+         if(inventory){
+            inventory.forEach(function(item) {
+               const enchantments = item.getMeta("enchantment");
+               if(enchantments){
+                  for (let key of Object.keys(enchantments)) {
+                     var enchantment = enchantments[key];
+                     BonusUtil.addEnchantment(item, enchantment, state.ItemFactory);
+                  } 
+                  console.log(enchantments);
+               }
+            });
+         }
       }
     }
   }
