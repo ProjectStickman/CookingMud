@@ -12,6 +12,7 @@ const {
 } = require('ranvier');
 const ArgParser = require('../../bundle-example-lib/lib/ArgParser');
 const ItemUtil = require('../../bundle-example-lib/lib/ItemUtil');
+const BonusUtil = require('../../merchants-tale/lib/BonusUtils.js');
 
 module.exports = {
   usage: "look [thing]",
@@ -203,7 +204,6 @@ function lookRoom(state, player) {
 
 
 function lookEntity(state, player, args) {
-   B.sayAt(player, "NewLook!", 80);
    const room = player.room;
  
    args = args.split(' ');
@@ -256,12 +256,13 @@ function lookEntity(state, player, args) {
    }
  
    if (entity instanceof Item) {
-      const enchantment = entity.getMeta('enchantment');
-      if(enchantment){
-         B.sayAt(player, `${entity.name} has the following enchantments:`);
-         enchantment.forEach(function(item) {
-            B.sayAt(player, '~ '+item.name+' - '+convertToRoman(item.level)+' ~');
-         });
+      const enchantments = entity.getMeta('enchantment');
+      if(enchantments){
+         B.sayAt(player, `Enchantments:`);
+         Object.keys(enchantments).forEach(function (key) {
+          const enchantment = enchantments[key];
+          B.sayAt(player, '- <cyan>'+enchantment.title+' - '+BonusUtil.convertToRoman(enchantment.level)+'</cyan>');
+        });
       }
       switch (entity.type) {
          case ItemType.WEAPON:
@@ -296,29 +297,3 @@ function getCombatantsDisplay(entity) {
    return `, <red>fighting </red>${combatantsList.join("<red>,</red> ")}`;
  }
  
- function convertToRoman(num) {
-   var roman = {
-     M: 1000,
-     CM: 900,
-     D: 500,
-     CD: 400,
-     C: 100,
-     XC: 90,
-     L: 50,
-     XL: 40,
-     X: 10,
-     IX: 9,
-     V: 5,
-     IV: 4,
-     I: 1
-   };
-   var str = '';
- 
-   for (var i of Object.keys(roman)) {
-     var q = Math.floor(num / roman[i]);
-     num -= q * roman[i];
-     str += i.repeat(q);
-   }
- 
-   return str;
- }

@@ -1,0 +1,10 @@
+{
+   "magical": {
+      "title" : "Magical",
+      "maxLevel": 3
+   },
+   "fiery": {
+      "title" : "Fiery",
+      "maxLevel": 5
+   }
+}
