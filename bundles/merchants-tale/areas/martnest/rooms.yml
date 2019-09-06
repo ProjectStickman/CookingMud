@@ -11,7 +11,14 @@
     - id: "mining:ironpickaxe"
       respawnChance: 10
       maxLoad: 1
+    - id: "mining:ironpickaxetest"
+      respawnChance: 10
+      maxLoad: 1
 - id: mainroad
   title: "Martnest Main Road"
   description: "A wide, curdly paved road leading to the town of Martnest. To the south the road travels up a hill, to the north it curves slightly into an area of taller trees."
   coordinates: [0, 1, 0]
+- id: mainroadforest
+  title: "Martnest Main Road"
+  description: "The forest around this area is considerably more dense than before."
+  coordinates: [0, 2, 0]

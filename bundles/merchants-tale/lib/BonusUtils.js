@@ -42,18 +42,22 @@ class BonusUtils{
       obj[enchantment.id] = enchantment;
       item.setMeta("enchantment", obj);
       
-      var path = "../../merchants-tale/enchantments/"+enchantment.id+".js";
+      var path = "./bundles/merchants-tale/enchantments/"+enchantment.id+".js";
       console.log("Script:"+path);
-      try {
-         if (fs.existsSync(path)) {
-            BundleManager.loadEntityScript(factory, item.title, path);
-            console.log(`Enchantment loaded for ${ItemUtil.display(item)} at `+path);
+      fs.access(path, fs.F_OK, (err) => {
+         if (err) {
+            console.error(err)
+            return ;
          }
-      } catch(err) {
-         console.log("FILE DOESNT' EXIST: "+path);
-      }
-      
-      return true;
+         console.log("Script found!");
+         console.log(item);
+         const entityRef = factory.createEntityRef(item.area.name, item.id);
+         BundleManager.prototype.loadEntityScript(factory, entityRef, "../../."+path);
+        
+         console.log('Enchantment loaded for '+item.name+' at '+path);
+         return true;
+      })
+      return;
   }
 }
 

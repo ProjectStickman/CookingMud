@@ -1,7 +1,6 @@
 {
   "port": 4000,
   "bundles": [
-    "bundle-example-areas",
     "bundle-example-channels",
     "bundle-example-classes",
     "bundle-example-combat",
@@ -12,7 +11,6 @@
     "bundle-example-lib",
     "bundle-example-npc-behaviors",
     "bundle-example-player-events",
-    "bundle-example-quests",
     "simple-crafting",
     "vendor-npcs",
     "player-groups",

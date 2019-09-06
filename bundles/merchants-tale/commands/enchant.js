@@ -50,7 +50,6 @@ module.exports = {
     }
 
     BonusUtil.addEnchantment(item, enchantment, state.ItemFactory);
-
     Broadcast.sayAt(player, `<green>You enchanted: </green>${ItemUtil.display(item)} with <cyan>`+enchantment.title+'</cyan>');
   }
 };

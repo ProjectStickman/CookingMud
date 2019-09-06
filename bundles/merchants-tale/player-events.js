@@ -13,6 +13,7 @@ module.exports = {
          B.sayAt(this, "update_tick");
          enchantmentsSet[this.name] = true;
          const inventory = this.inventory;
+         const equip = this.equipment;
          //console.log(inventory);
          //var itemEnchantments = item.getMeta("enchantment");
          if(inventory){
@@ -23,7 +24,18 @@ module.exports = {
                      var enchantment = enchantments[key];
                      BonusUtil.addEnchantment(item, enchantment, state.ItemFactory);
                   } 
-                  console.log(enchantments);
+               }
+            });
+         }
+
+         if(equip){
+            equip.forEach(function(item) {
+               const enchantments = item.getMeta("enchantment");
+               if(enchantments){
+                  for (let key of Object.keys(enchantments)) {
+                     var enchantment = enchantments[key];
+                     BonusUtil.addEnchantment(item, enchantment, state.ItemFactory);
+                  } 
                }
             });
          }
