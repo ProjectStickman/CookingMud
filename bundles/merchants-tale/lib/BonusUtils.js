@@ -36,7 +36,8 @@ class BonusUtils{
       return str;
    }
 
-   static addEnchantment(item, enchantment, factory){
+   static addEnchantment(item, enchantment, state){
+      var factory = state.ItemFactory;
       //Putting the data on the item
       var obj = {};
       obj[enchantment.id] = enchantment;
@@ -50,10 +51,9 @@ class BonusUtils{
             return ;
          }
          console.log("Script found!");
-         console.log(item);
          const entityRef = factory.createEntityRef(item.area.name, item.id);
          BundleManager.prototype.loadEntityScript(factory, entityRef, "../../."+path);
-        
+         item.setupBehaviors(state.ItemBehaviorManager);
          console.log('Enchantment loaded for '+item.name+' at '+path);
          return true;
       })

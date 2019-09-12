@@ -17,7 +17,7 @@
       "base": 11
     },
     "health": {
-      "delta": -3,
+      "delta": 0,
       "base": 154
     },
     "armor": {
@@ -51,13 +51,13 @@
         "type": "regen",
         "unique": true
       },
-      "elapsed": 6014994,
+      "elapsed": 6049181,
       "id": "regen",
       "remaining": null,
       "state": {
         "magnitude": 15,
-        "lastTick": 1310,
-        "ticks": 1927
+        "lastTick": 318,
+        "ticks": 1930
       }
     }
   ],
@@ -100,6 +100,39 @@
           ],
           "name": "Iron Pickaxe",
           "roomDesc": "Iron Pickaxe",
+          "closed": false,
+          "locked": false,
+          "behaviors": {}
+        }
+      ],
+      [
+        "eb9b7d60-00fb-4cde-b6c3-3bd8a635bfd3",
+        {
+          "entityReference": "mining:ironpickaxetest",
+          "inventory": null,
+          "metadata": {
+            "level": 1,
+            "slot": "wield",
+            "itemLevel": 1,
+            "quality": "common",
+            "minDamage": 1,
+            "maxDamage": 1,
+            "speed": 2.8,
+            "stats": {
+              "critical": 1
+            }
+          },
+          "description": "SPECIAL PICK",
+          "keywords": [
+            "pick",
+            "pickaxe",
+            "metal",
+            "iron",
+            "mining",
+            "dig"
+          ],
+          "name": "Iron PickaxeTest",
+          "roomDesc": "Iron PickaxeTest",
           "closed": false,
           "locked": false,
           "behaviors": {}

@@ -22,7 +22,7 @@ module.exports = {
                if(enchantments){
                   for (let key of Object.keys(enchantments)) {
                      var enchantment = enchantments[key];
-                     BonusUtil.addEnchantment(item, enchantment, state.ItemFactory);
+                     BonusUtil.addEnchantment(item, enchantment, state);
                   } 
                }
             });
@@ -34,7 +34,7 @@ module.exports = {
                if(enchantments){
                   for (let key of Object.keys(enchantments)) {
                      var enchantment = enchantments[key];
-                     BonusUtil.addEnchantment(item, enchantment, state.ItemFactory);
+                     BonusUtil.addEnchantment(item, enchantment, state);
                   } 
                }
             });
