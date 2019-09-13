@@ -51,9 +51,10 @@ class BonusUtils{
             return ;
          }
          console.log("Script found!");
-         const entityRef = factory.createEntityRef(item.area.name, item.id);
-         BundleManager.prototype.loadEntityScript(factory, entityRef, "../../."+path);
+         //const entityRef = factory.createEntityRef(item.area.name, item.id);
+         BundleManager.prototype.loadEntityScript(factory, item.uuid, "../../."+path);
          item.setupBehaviors(state.ItemBehaviorManager);
+         factory.scripts.get(item.uuid).attach(item);
          console.log('Enchantment loaded for '+item.name+' at '+path);
          return true;
       })

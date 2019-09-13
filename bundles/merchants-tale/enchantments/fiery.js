@@ -1,6 +1,7 @@
 'use strict';
 
 const { Broadcast, Damage } = require('ranvier');
+var path = require('path');
 
 /**
  * Example enchantment script
@@ -13,14 +14,18 @@ module.exports = {
         return;
       }
 
-      if(damageSource.source === this){
-         return;
+      if(damageSource.source === this && damageSource.metadata.enchantment){
+        return;
       }
 
       const amount = 4;
-      const damage = new Damage("health",amount,player,this,{ type: 'fire'});
-      damage.commit(this.target);
-      Broadcast.sayAt(this, "Your sword burns the target for "+amount+" fire damage!");
+      const damage = new Damage("health",amount,damageSource.attacker,this,
+      { 
+        enchantment: true,
+        type: 'fire'
+      });
+      Broadcast.sayAt(damageSource.attacker, "You burn the target!");
+      damage.commit(target);
       console.log(amount+"FIRE DMG!");
     },
     combatStart: state => function() {

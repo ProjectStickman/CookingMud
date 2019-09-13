@@ -17,7 +17,7 @@
       "base": 11
     },
     "health": {
-      "delta": 0,
+      "delta": -1,
       "base": 154
     },
     "armor": {
@@ -51,60 +51,43 @@
         "type": "regen",
         "unique": true
       },
-      "elapsed": 6049181,
+      "elapsed": 7700919,
       "id": "regen",
       "remaining": null,
       "state": {
         "magnitude": 15,
-        "lastTick": 318,
-        "ticks": 1930
+        "lastTick": 106,
+        "ticks": 2377
+      }
+    },
+    {
+      "config": {
+        "autoActivate": true,
+        "description": "",
+        "duration": "inf",
+        "hidden": true,
+        "maxStacks": 0,
+        "name": "Equip: wield",
+        "persists": true,
+        "refreshes": false,
+        "tickInterval": false,
+        "type": "equip.wield",
+        "unique": true
+      },
+      "elapsed": 1547433,
+      "id": "equip",
+      "remaining": null,
+      "state": {
+        "slot": "wield",
+        "stats": {
+          "critical": 1
+        }
       }
     }
   ],
-  "experience": 495,
+  "experience": 990,
   "inventory": {
     "items": [
-      [
-        "615d38bf-4209-47b2-a811-ea9d2d69f3d0",
-        {
-          "entityReference": "mining:ironpickaxe",
-          "inventory": null,
-          "metadata": {
-            "level": 2,
-            "slot": "wield",
-            "itemLevel": 1,
-            "quality": "common",
-            "minDamage": 4,
-            "maxDamage": 15,
-            "speed": 2.8,
-            "stats": {
-              "critical": 1
-            },
-            "enchantment": {
-              "fiery": {
-                "title": "Fiery",
-                "level": 1,
-                "maxLevel": 5,
-                "id": "fiery"
-              }
-            }
-          },
-          "description": "A heavily used and rather jagged iron pickaxe.",
-          "keywords": [
-            "pick",
-            "pickaxe",
-            "metal",
-            "iron",
-            "mining",
-            "dig"
-          ],
-          "name": "Iron Pickaxe",
-          "roomDesc": "Iron Pickaxe",
-          "closed": false,
-          "locked": false,
-          "behaviors": {}
-        }
-      ],
       [
         "eb9b7d60-00fb-4cde-b6c3-3bd8a635bfd3",
         {
@@ -153,5 +136,44 @@
     "active": []
   },
   "role": 2,
-  "equipment": {}
+  "equipment": {
+    "wield": {
+      "entityReference": "mining:ironpickaxe",
+      "inventory": null,
+      "metadata": {
+        "level": 2,
+        "slot": "wield",
+        "itemLevel": 1,
+        "quality": "common",
+        "minDamage": 4,
+        "maxDamage": 15,
+        "speed": 2.8,
+        "stats": {
+          "critical": 1
+        },
+        "enchantment": {
+          "fiery": {
+            "title": "Fiery",
+            "level": 1,
+            "maxLevel": 5,
+            "id": "fiery"
+          }
+        }
+      },
+      "description": "A heavily used and rather jagged iron pickaxe.",
+      "keywords": [
+        "pick",
+        "pickaxe",
+        "metal",
+        "iron",
+        "mining",
+        "dig"
+      ],
+      "name": "Iron Pickaxe",
+      "roomDesc": "Iron Pickaxe",
+      "closed": false,
+      "locked": false,
+      "behaviors": {}
+    }
+  }
 }
