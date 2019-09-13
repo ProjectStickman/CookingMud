@@ -17,7 +17,7 @@
       "base": 11
     },
     "health": {
-      "delta": -1,
+      "delta": 0,
       "base": 154
     },
     "armor": {
@@ -51,13 +51,13 @@
         "type": "regen",
         "unique": true
       },
-      "elapsed": 7700919,
+      "elapsed": 10109306,
       "id": "regen",
       "remaining": null,
       "state": {
         "magnitude": 15,
-        "lastTick": 106,
-        "ticks": 2377
+        "lastTick": 2969,
+        "ticks": 3167
       }
     },
     {
@@ -74,7 +74,7 @@
         "type": "equip.wield",
         "unique": true
       },
-      "elapsed": 1547433,
+      "elapsed": 3955805,
       "id": "equip",
       "remaining": null,
       "state": {
@@ -127,7 +127,7 @@
   "metadata": {
     "class": "warrior",
     "resources": {
-      "iron_ore": 15
+      "iron_ore": 18
     }
   },
   "prompt": "[ %health.current%/%health.max% <b>hp</b> %energy.current%/%energy.max% <b>energy</b> ]",

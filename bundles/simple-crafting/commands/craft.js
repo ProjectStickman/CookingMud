@@ -1,7 +1,11 @@
 'use strict';
 
 const sprintf = require('sprintf-js').sprintf;
-const { Broadcast: B, CommandManager, ItemType } = require('ranvier');
+const {
+  Broadcast: B,
+  CommandManager,
+  ItemType
+} = require('ranvier');
 const Crafting = require('../lib/Crafting');
 const say = B.sayAt;
 const ItemUtil = require('../../bundle-example-lib/lib/ItemUtil');
@@ -123,7 +127,7 @@ module.exports = {
       return say(player, "Missing craft command. See 'help craft'");
     }
 
-    const [ command, ...subArgs ] = args.split(' ');
+    const [command, ...subArgs] = args.split(' ');
 
     const subcommand = subcommands.find(command);
     if (!subcommand) {
@@ -135,8 +139,7 @@ module.exports = {
 };
 
 function getCraftingCategories(state) {
-  let craftingCategories = [
-    {
+  let craftingCategories = [{
       type: ItemType.POTION,
       title: "Potion",
       items: []
@@ -168,7 +171,7 @@ function getCraftingCategories(state) {
       continue;
     }
 
-  recipeItem.hydrate(state);
+    recipeItem.hydrate(state);
     craftingCategories[catIndex].items.push({
       item: recipeItem,
       recipe: recipe.recipe

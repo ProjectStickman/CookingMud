@@ -23,13 +23,8 @@ module.exports = {
       return B.sayAt(player, "You can't gather anything from that.");
     }
 
-    //const tool = getTool(state, node.getMeta('tool'));
     const metaTool = node.getMeta('tool')
     const toolSplit = metaTool.split(":");
-    //const tool = state.ItemFactory.create(toolSplit[0], metaTool);
-    console.log(metaTool);
-    console.log(player.equipment);
-    console.log(player.equipment.wield);
     const item = ArgParser.parseDot(metaTool[1], player.equipment, true);
     console.log(item);
     if (!item) {

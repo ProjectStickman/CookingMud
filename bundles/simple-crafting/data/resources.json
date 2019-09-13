@@ -1,14 +1,24 @@
 {
-  "plant_material": {
-    "title": "Plant Material",
-    "quality": "common"
-  },
   "rose_petal": {
     "title": "Rose Petal",
-    "quality": "uncommon"
+    "quality": "uncommon",
+    "type": "plant"
+  },
+  "coal": {
+    "title": "Coal",
+    "quality": "common",
+    "type": "fuel"
   },
   "iron_ore": {
     "title": "Iron Ore",
-    "quality": "uncommon"
+    "quality": "common",
+    "smelt_into": "iron_bar",
+    "type": "ore",
+    "fuel": "coal"
+  },
+  "iron_bar": {
+    "title": "Iron Bar",
+    "quality": "common",
+    "type": "metal"
   }
 }

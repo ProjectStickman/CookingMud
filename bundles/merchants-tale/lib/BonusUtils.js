@@ -60,6 +60,14 @@ class BonusUtils{
       })
       return;
   }
+
+   static qualityColorize(quality, string) {
+      var qualityColors = ItemUtil.qualityColors;
+      const colors = qualityColors[quality || 'common'];
+      const open = '<' + colors.join('><') + '>';
+      const close = '</' + colors.reverse().join('></') + '>';
+      return open + string + close;
+   }
 }
 
 module.exports = BonusUtils;

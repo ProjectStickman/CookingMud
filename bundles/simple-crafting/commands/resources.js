@@ -2,6 +2,7 @@
 
 const { Broadcast: B } = require('ranvier');
 const Crafting = require('../lib/Crafting');
+const BonusUtil = require('../../merchants-tale/lib/BonusUtils.js');
 const ItemUtil = require('../../bundle-example-lib/lib/ItemUtil');
 
 module.exports = {
@@ -20,8 +21,9 @@ module.exports = {
       const amount = playerResources[resourceKey];
       totalAmount += amount;
 
-      const resItem = Crafting.getResourceItem(resourceKey);
-      B.sayAt(player, `${ItemUtil.display(resItem)} x ${amount}`);
+      const resourceDef = Crafting.getResource(resourceKey);
+      var str = BonusUtil.qualityColorize(resourceDef.quality, resourceDef.title);
+      B.sayAt(player, `[${resourceDef.type}] ${str} x ${amount}`);
     }
 
     if (!totalAmount) {
