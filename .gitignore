@@ -253,8 +253,6 @@ bundles/bundle-example-input-events
 bundles/bundle-example-effects
 bundles/bundle-example-debug
 bundles/bundle-example-commands
-bundles/bundle-example-combat-extended
-bundles/bundle-example-classes-extended
 bundles/bundle-example-channels
 bundles/bundle-example-areas
 .gitmodules
